@@ -1,1 +1,1 @@
-# Barbershop-2017
+# Barbershop-2017 (Адаптивный)
