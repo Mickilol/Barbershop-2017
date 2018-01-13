@@ -1,9 +1,9 @@
 .main-nav {
   position: relative;
   
-  width: 320px;
+  width: auto;
   min-height: 51px; // Чтобы не было схолывания и растягивания блока при переходе из мобильной версии и обратно
-  margin: 0 auto;
+  //margin: 0 auto;
   
   background-color: #826550;
 }
@@ -155,8 +155,10 @@
     width: 16px;
     height: 16px;
     
-    background-image: url("../img/index/icon-login.png");
-    //background-position: -10px -82px;
+    background-image: url("../img/index/sprites.png");
+    background-position: -33px -33px ;
+    width: 16px;
+	height: 16px;
     //opacity: 0.3;
   }
 }
@@ -231,7 +233,7 @@
   .main-nav--nojs .main-nav__user-items {
     display: block;
     
-     background-color: #6a4d38;
+    background-color: #6a4d38;
   }
 }
 
@@ -245,8 +247,11 @@
   }
   
   .main-nav__wrapper {
-    .container();
-    .clearfix();
+    .container-fluid();
+    //.clearfix();
+    
+    display: flex;
+    justify-content: space-between;
   }
   
   .main-nav__toggle {
@@ -254,13 +259,17 @@
   }
   
   .main-nav__items {
-    float: left;
-    width: 570px;
+    //float: left;
+    //width: 570px;
     
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    //justify-content: space-between;
   }
   
   .main-nav__user-items {
-    float: right;
+    //float: right;
     width: 60px;
     
   }
@@ -325,12 +334,12 @@
     }
     
     &:hover::before {
-      //background-position: -10px -46px;
+      background-position: -157px -33px ;
       opacity: 1;
     }
     
     &:active::before {
-      //background-position: -10px -82px;
+      background-position: -33px -33px ;
       opacity: 0.3;
     }
   }
@@ -405,44 +414,16 @@
     }
     
     &:hover::before {
-      //background-position: ;
+      background-position: -100px -33px ;
     }
     
     &:active::before {
       //background-position: ;
-      opacity: 0.1;
+      opacity: 0.3;
     }
   }
   
   .main-nav__user-login::before {
     left: 15px;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 }

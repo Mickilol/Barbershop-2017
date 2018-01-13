@@ -1,0 +1,40 @@
+.icon-login, .index-logo-hvr, .tablet-logo-hvr, .vk-icon-big, .facebook-icon-big, .insta-icon-big{
+	background: url(sprites.png) no-repeat;
+}
+
+.icon-login{
+	background-position: -33px -33px ;
+	width: 16px;
+	height: 16px;
+}
+
+.index-logo-hvr{
+	background-position: -100px -33px ;
+	width: 16px;
+	height: 16px;
+}
+
+.tablet-logo-hvr{
+	background-position: -157px -33px ;
+	width: 16px;
+	height: 16px;
+}
+
+.vk-icon-big{
+	background-position: -200px -23px ;
+	width: 23px;
+	height: 26px;
+}
+
+.facebook-icon-big{
+	background-position: -250px -10px ;
+	width: 18px;
+	height: 39px;
+}
+
+.insta-icon-big{
+	background-position: -300px -13px ;
+	width: 36px;
+	height: 36px;
+}
+
