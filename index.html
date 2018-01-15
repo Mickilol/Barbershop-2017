@@ -106,12 +106,15 @@
         <h2 class="news__title">Новости и Акции</h2>
         <ul class="news__items">
           <li class="news__item">
+            <div class="news__data"><span class="news__data--number">29</span><br>сент</div>
             Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
           </li>
           <li class="news__item">
+           <div class="news__data"><span class="news__data--number">19</span><br>сент</div>
             В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
           </li>
           <li class="news__item">
+           <div class="news__data"><span class="news__data--number">9</span><br>сент</div>
             Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
           </li>
         </ul>
@@ -119,14 +122,31 @@
       </div>
     </section>
     
-    <div class="block-mock"></div>
+    
     
     <section class="reviews">
-      <h2 class="reviews__title"></h2>
-      
-      <div class="reviews__items"></div>
+     <div class="reviews__wrapper">
+        <h2 class="reviews__title">Отзывы о нас</h2>
+        <button class="reviews__button">Оставить свой</button>
+        <input type="radio" id="reviews__btn-1" name="reviews__toggle" checked>
+         <input type="radio" id="reviews__btn-2" name="reviews__toggle">
+         <input type="radio" id="reviews__btn-3" name="reviews__toggle">
+         <div class="reviews__slides">
+          <label for="reviews__btn-1"></label>
+          <label for="reviews__btn-2"></label>
+          <label for="reviews__btn-3"></label>
+         </div>
+        <div class="reviews__items">
+          <div class="reviews__item">
+           <div class="reviews__item--img"></div>
+            <span class="reviews__item--name">Трэвис Баркер</span>
+            <p class="reviews__item--text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          </div>
+        </div>
+      </div>
     </section>
     
+    <div class="block-mock"></div>
   </main>
   
   <footer class="page-footer">
