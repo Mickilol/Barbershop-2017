@@ -1034,6 +1034,9 @@ img {
   font-size: 24px;
   font-weight: bold;
 }
+.reviews__item--switch {
+  display: none;
+}
 @media (min-width: 768px) {
   .reviews__wrapper {
     flex-direction: row;
@@ -1063,19 +1066,58 @@ img {
     padding: 0;
   }
   .reviews__item {
-    padding: 35px 0;
-    padding-left: 188px;
-    padding-right: 93px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
     border: 1px solid #e5ddd5;
   }
   .reviews__item--img {
+    position: static;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 80px;
     background: url("../img/index/index-tablet/Layer%2032.png") no-repeat;
+  }
+  .reviews__item--wrapper {
+    padding: 35px 0;
+    width: 57%;
+  }
+  .reviews__item--switch {
+    display: block;
+    position: relative;
+    align-self: stretch;
+    width: 49px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+  }
+  .reviews__item--switch-left {
+    border-right: 1px solid #e5ddd5;
+  }
+  .reviews__item--switch-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateX(-25%) translateY(-50%);
+    border: 12px solid transparent;
+    border-right: 12px solid #000000;
+  }
+  .reviews__item--switch-right {
+    border-left: 1px solid #e5ddd5;
+  }
+  .reviews__item--switch-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateX(25%) translateY(-50%);
+    border: 12px solid transparent;
+    border-left: 12px solid #000000;
   }
   .reviews__slides {
     width: 12%;
@@ -1086,6 +1128,41 @@ img {
     transform: translateX(-50%);
     z-index: 2;
     background-color: #f8f5f2;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews__wrapper {
+    padding-bottom: 47px;
+  }
+  .reviews__title {
+    margin-left: 70px;
+  }
+  .reviews__items {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .reviews__item {
+    flex-shrink: 0;
+  }
+  .reviews__item--img {
+    border-radius: 0;
+    width: 248px;
+    height: 160px;
+    align-self: center;
+    margin-left: -40px;
+    background: url(../img/index/index.png) no-repeat;
+  }
+  .reviews__item--switch-right {
+    margin-right: -71px;
+    border: 1px solid #e5ddd5;
+  }
+  .reviews__item--switch-left {
+    margin-left: -71px;
+    border: 1px solid #e5ddd5;
+  }
+  .reviews__slides {
+    margin-top: 42px;
+    padding: 0;
   }
 }
 /* Наши работы */
