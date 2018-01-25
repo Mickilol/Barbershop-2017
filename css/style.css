@@ -618,6 +618,7 @@ img {
   width: auto;
   min-height: 320px;
   padding-top: 30px;
+  padding-bottom: 13px;
 }
 @media (min-width: 768px) {
   .advantages__wrapper {
@@ -899,6 +900,7 @@ img {
   font-weight: bold;
   line-height: 24px;
   text-transform: uppercase;
+  cursor: pointer;
   border: 1px solid #e5ddd5;
 }
 @media (min-width: 768px) {
@@ -1060,6 +1062,7 @@ img {
     font-weight: bold;
     line-height: 24px;
     text-transform: uppercase;
+    cursor: pointer;
     border: 1px solid #e5ddd5;
   }
   .reviews__items {
@@ -1094,6 +1097,7 @@ img {
     margin: 0;
     background: none;
     border: 0;
+    cursor: pointer;
   }
   .reviews__item--switch-left {
     border-right: 1px solid #e5ddd5;
@@ -1163,6 +1167,141 @@ img {
   .reviews__slides {
     margin-top: 42px;
     padding: 0;
+  }
+}
+.page-footer__wrapper {
+  width: auto;
+  padding-top: 39px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    width: 84%;
+    /* 640px / 768px ~= 84% */
+    max-width: 960px;
+    /* 960px / .84 ~= 1142px (центровка начнется чуть раньше 1200px) */
+    margin: 0 auto;
+  }
+}
+.page-footer__contacts {
+  margin: 0 6%;
+  text-align: center;
+}
+.page-footer__contacts--name {
+  margin-bottom: 20px;
+}
+.page-footer__contacts span {
+  display: none;
+}
+.page-footer__contacts--phone {
+  display: block;
+  margin-top: 20px;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 10px 0;
+  width: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #3f3f3f;
+}
+.page-footer__social {
+  display: flex;
+  margin-top: 26px;
+  margin-bottom: 35px;
+  width: 100%;
+}
+.page-footer__social span {
+  display: none;
+}
+.page-footer__social--networks {
+  display: flex;
+  box-sizing: border-box;
+  width: 33.3%;
+  height: 101px;
+  border: 1px solid #3f3f3f;
+  content: "";
+  text-decoration: none;
+}
+.page-footer__social--vk {
+  width: 23px;
+  height: 26px;
+  margin: auto;
+  background: url("../../img/index/sprites.png") no-repeat -200px -23px;
+}
+.page-footer__social--fb {
+  width: 18px;
+  height: 39px;
+  margin: auto;
+  background: url("../../img/index/sprites.png") no-repeat -250px -10px;
+}
+.page-footer__social--ig {
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  background: url("../../img/index/sprites.png") no-repeat -300px -13px;
+}
+.page-footer__copyright {
+  padding: 0 6%;
+  text-align: center;
+}
+.page-footer__copyright--developer {
+  display: block;
+  margin-top: 20px;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #3f3f3f;
+}
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    padding: 0 8.5%;
+    padding-top: 55px;
+    padding-bottom: 59px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .page-footer__contacts {
+    margin: 0;
+    text-align: left;
+    width: 55%;
+  }
+  .page-footer__contacts b {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .page-footer__contacts span {
+    display: inline-block;
+  }
+  .page-footer__contacts--phone {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-weight: normal;
+    border: 0;
+  }
+  .page-footer__social {
+    order: 2;
+    margin: 0;
+    margin-top: 50px;
+  }
+  .page-footer__copyright {
+    padding: 0;
+    width: 25%;
+  }
+  .page-footer__copyright--developer {
+    width: 160px;
+    margin-top: 15px;
   }
 }
 /* Наши работы */
