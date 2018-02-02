@@ -1167,6 +1167,7 @@ img {
   .reviews__slides {
     margin-top: 42px;
     padding: 0;
+    width: 76px;
   }
 }
 .page-footer__wrapper {
@@ -1230,19 +1231,19 @@ img {
   width: 23px;
   height: 26px;
   margin: auto;
-  background: url("../../img/index/sprites.png") no-repeat -200px -23px;
+  background: url("../img/index/sprites.png") no-repeat -200px -23px;
 }
 .page-footer__social--fb {
   width: 18px;
   height: 39px;
   margin: auto;
-  background: url("../../img/index/sprites.png") no-repeat -250px -10px;
+  background: url("../img/index/sprites.png") no-repeat -250px -10px;
 }
 .page-footer__social--ig {
   width: 36px;
   height: 36px;
   margin: auto;
-  background: url("../../img/index/sprites.png") no-repeat -300px -13px;
+  background: url("../img/index/sprites.png") no-repeat -300px -13px;
 }
 .page-footer__copyright {
   padding: 0 6%;
@@ -1297,11 +1298,62 @@ img {
   }
   .page-footer__copyright {
     padding: 0;
-    width: 25%;
+    width: 160px;
   }
   .page-footer__copyright--developer {
     width: 160px;
-    margin-top: 15px;
+    margin-top: 17px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-footer__wrapper {
+    padding: 0;
+    padding-top: 55px;
+    padding-bottom: 59px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .page-footer__contacts {
+    width: 320px;
+    margin-right: 79px;
+  }
+  .page-footer__social {
+    width: 162px;
+    order: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .page-footer__social span {
+    display: inline;
+    margin: 0 auto;
+    line-height: 24px;
+  }
+  .page-footer__social--networks {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+  }
+  .page-footer__social--vk {
+    width: 15px;
+    height: 17px;
+    background-position: -360px -30px;
+  }
+  .page-footer__social--fb {
+    width: 10px;
+    height: 21px;
+    background-position: -410px -27px;
+  }
+  .page-footer__social--ig {
+    width: 19px;
+    height: 19px;
+    background-position: -460px -29px;
+  }
+  .page-footer__social--networks:last-child {
+    margin-right: 0;
+  }
+  .page-footer__copyright {
+    margin-left: auto;
   }
 }
 /* Наши работы */
