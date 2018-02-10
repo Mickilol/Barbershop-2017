@@ -125,6 +125,11 @@
     cursor: pointer;
 
     border: 1px solid #e5ddd5;
+    
+    &:active {
+      background-color: #d5c9bd;
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
   
   .reviews__items {
@@ -187,7 +192,15 @@
       
       border: 12px solid transparent;
       border-right: 12px solid #000000;  
+    }
+    
+    &:active {
+      background-color: #d5c9bd;
+      
+      &::before {
+        border-right-color: #958c84;
       }
+    }
   }
   
   .reviews__item--switch-right {
@@ -203,7 +216,15 @@
       
       border: 12px solid transparent;
       border-left: 12px solid #000000;  
+    }
+    
+    &:active {
+      background-color: #d5c9bd;
+      
+      &::before {
+        border-left-color: #958c84;
       }
+    }
     
   }
   
