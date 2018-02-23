@@ -1,3 +1,29 @@
+.page-footer {
+  position: relative;
+    
+  &::before {
+      content: '';
+      position: absolute;
+      right: 50%;
+      top: -200px;
+      
+      border-top: 200px solid transparent;
+      border-left: 960px solid @bg-darkgrey;
+      z-index: 10;
+  }
+    
+  &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -200px;
+      
+      border-top: 200px solid transparent;
+      border-right: 960px solid @bg-darkgrey;
+      z-index: 10;
+  }
+}
+
 .page-footer__wrapper {
   .container-fluid();
   
@@ -163,42 +189,52 @@
 }
 
 @media @tablet-widths {
-  .page-footer__wrapper {
-    padding: 0 8.5%;
-    padding-top: 55px;
-    padding-bottom: 59px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-   .page-footer__contacts {
-    margin: 0;
-    text-align: left;
-    width: 55%;
-     
-    b {
-      display: inline-block;
-      margin-bottom: 12px;
-    }
-     
-    span {
-      display: inline-block;
-    }
-     
-    &--phone {
-      display: inline-block;
-      padding: 0;
-      margin: 0;
-      width: auto;
-      font-weight: normal;
-      border: 0;
+    .page-footer {
+      &::before {
+        border:none;
+      }
       
-      &:active {
-        background-color: #292929;
-        color: #ffffff;
+      &::after {
+        border: none;
       }
     }
+    
+    .page-footer__wrapper {
+        padding: 0 8.5%;
+        padding-top: 55px;
+        padding-bottom: 59px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+  
+   .page-footer__contacts {
+        margin: 0;
+        text-align: left;
+        width: 55%;
+
+        b {
+          display: inline-block;
+          margin-bottom: 12px;
+        }
+
+        span {
+          display: inline-block;
+        }
+
+        &--phone {
+          display: inline-block;
+          padding: 0;
+          margin: 0;
+          width: auto;
+          font-weight: normal;
+          border: 0;
+
+          &:active {
+            background-color: #292929;
+            color: #ffffff;
+          }
+        }
   }
   
   .page-footer__social {
