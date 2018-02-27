@@ -1,0 +1,295 @@
+.works-list {
+  background: @bg-lightgrey;
+  color: #000000;
+}
+
+.works-list__wrapper {
+  .container-fluid();
+  padding: 0 6.25%;
+   
+  display: flex;
+  flex-direction: column;
+  
+  padding-bottom: 68px;
+}
+
+.works-item {
+  display: flex;
+  flex-direction: column;
+   
+  margin-bottom: 20px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.works-item__img-wrapper {
+  height: 176px;
+   
+  text-align: center;
+  background: #e5ddd5;
+}
+
+.works-item--work-of-month {
+  position: relative;
+  
+  &::after {
+    position: absolute;
+    content: '';
+    
+    top: 400px;
+    left: 165px;
+    
+    border: 25px solid #826550;
+    border-left: none;
+    border-right: 9px solid transparent;
+  }
+  
+  &::before {
+    position: absolute;
+    content: "Работа месяца";
+    padding: 12px;
+    
+    box-sizing: border-box;
+    height: 50px;
+    width: 165px;
+    
+    top: 400px;
+    left: 0;
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    
+    background: #826550;
+  }
+}
+
+.works-item--work-of-month .works-item__img-wrapper {
+  height: 480px;
+}
+
+.works-item__review {
+  padding: 0 23px;
+  padding-right: 35px;
+  padding-top: 25px;
+   
+  border: 1px solid #e5ddd5;
+  border-top: none;
+}
+
+.works-item__title {
+  margin: 0;
+   
+  font-size: 24px;
+  text-transform: none;
+}
+
+.works-item__blockquote {
+  margin: 0;
+  margin: 20px 0;
+}
+
+.works-item__parameter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.works-item__parameter-item {
+  padding-left: 38px;
+  position: relative;
+  
+  margin-bottom: 30px;
+  
+  &::before {
+    position: absolute;
+    content: '';
+    
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  
+  &--haircut {
+    margin-right: 35px;
+    
+    &::before {
+      width: 22px;
+      height: 20px;
+      
+      background: url("../img/photos/scissors-icon.svg") no-repeat;
+    }
+  }
+  
+  &--shave,
+  &--beard {
+    margin-right: 30px;
+    
+    &::before {
+      width: 25px;
+      height: 21px;
+      
+      background: url("../img/photos/beard-icon.svg") no-repeat;
+    }
+  }
+  
+  &--mustache {
+    padding-left: 60px;
+    
+    &::before {
+      width: 47px;
+      height: 12px;
+      
+      background: url("../img/photos/mustache-icon.svg") no-repeat;
+    }
+  }
+}
+
+@media @tablet-widths {
+  
+  .works-list__wrapper {
+    padding: 0 8.5%;
+    padding-bottom: 103px;
+  }
+  
+  .works-item {
+    flex-direction: row;
+  }
+  
+  .works-item__img-wrapper {
+    box-sizing: border-box;
+    max-width: 270px;
+    height: 293px;
+    
+    flex-shrink: 0;
+  }
+  
+  .works-item--work-of-month {
+    &::before,
+    &::after {
+      top: 35px;
+    }
+  }
+  
+  .works-item__review {
+    width: auto;
+    flex-grow: 1;
+    
+    padding: 0 52px;
+    padding-bottom: 10px;
+    padding-top: 50px;
+   
+    border: 1px solid #e5ddd5;
+    border-left: none;
+  }
+  
+  .works-item__review-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .works-item__blockquote {
+    margin-top: 30px;
+  }
+  
+  .works-item__parameter-list {
+    margin-top: auto;
+  }
+}
+
+@media @desktop-widths {
+  .works-list__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    padding-bottom: 90px;
+  }
+  
+  .works-item {
+    width: 294px;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .works-item--work-of-month {
+    width: 100%;
+    flex-direction: row;
+    
+    margin-bottom: 40px;
+    
+    &::before,
+    &::after {
+      left: auto;
+      top: 25px;
+      right: 0;
+    }
+    
+    &::after {
+      
+      right: 165px;
+      border: 25px solid #826550;
+      border-right: none;
+      border-left: 9px solid transparent;
+    }
+    
+  }
+  
+  .works-item--work-of-month .works-item__img-wrapper {
+    max-width: 480px;
+  }
+  
+  .works-item__img-wrapper {
+    max-width: 293px;
+  }
+
+  .works-item__review {
+    height: 100%;
+    
+    padding: 0 35px;
+    padding-top: 40px;
+    
+    border: 1px solid #e5ddd5;
+    border-top: none;
+  }
+  
+  .works-item--work-of-month .works-item__review {
+    height: auto;
+    
+    padding-top: 138px;
+    padding-right: 110px;
+    
+    border: 1px solid #e5ddd5;
+    border-left: none;
+  }
+  
+  .works-item--work-of-month .works-item__blockquote {
+    padding-right: 50px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -33,9 +33,10 @@ gulp.task("less", function() {
   ]))
   
   .pipe(gulp.dest("css"))
+  .pipe(gulp.dest("build/css"))
   .pipe(minify())
   .pipe(rename("style.min.css"))
-  .pipe(gulp.dest("css"))
+  .pipe(gulp.dest("build/css"))
   
   .pipe(server.reload({stream: true}));
 });
@@ -59,7 +60,7 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("serve",/*["less"],*/ function() {
+gulp.task("serve", ["less"], function() {
   server.init({
     server: "build"
   });
@@ -74,6 +75,7 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
+    "css/normalize.css",
     "img/**",
     "js/**",
     "*html"

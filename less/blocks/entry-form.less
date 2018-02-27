@@ -18,6 +18,8 @@
   margin: 0;
   padding: 34px 0;
   
+  
+  
   font-size: 30px;
   text-transform: uppercase;
   line-height: 30px;
@@ -40,6 +42,7 @@
     
     input,
     textarea {
+        
         box-sizing: border-box;
         width: 100%;
         height: 50px;
@@ -52,12 +55,13 @@
         
         border: 1px solid #e5ddd5;
         
-        &:hover {
-            border-color: #d5c9bd;
+        &:focus{
+          outline-color: #999999;
+          border-color: #999999;
         }
         
-        &:active {
-            border-color: #999999;
+        &:hover {
+            border-color: #d5c9bd;
         }
     }
     
@@ -277,6 +281,7 @@
     height: 50px;
     
     margin-bottom: 73px;
+    
     
     background: #826550;
     line-height: 24px;

@@ -1,9 +1,33 @@
 .price {
-  margin: 50px 0;
-  padding: 40px 20px;
+  padding: 40px 6.25%;
+  padding-bottom: 50px;
   color: #fff;
   background-color: #353535;
-  box-shadow: 0 0 5px #666;
+  box-shadow: 0 0 5px -5px #666;
+  
+  position: relative;
+  
+  &::before {
+      content: '';
+      position: absolute;
+      right: 50%;
+      top: -200px;
+      
+      border-top: 200px solid transparent;
+      border-left: 960px solid #353535;
+      z-index: 10;
+  }
+    
+  &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -200px;
+      
+      border-top: 200px solid transparent;
+      border-right: 960px solid #353535;
+      z-index: 10;
+  }
 }
 
 .price__header {
@@ -71,17 +95,30 @@
     position: absolute;
     top: 50%;
     left: 20px;
-    width: 57px;
-    height: 57px;
+    width: 60px;
+    height: 60px;
     transform: translateY(-50%);
-    border: 2px solid white;
     border-radius: 50%;
+    
+    background: url("../../img/photos/tablet/clock%20illustration-2.png") center no-repeat;
   }
 }
 
 @media @tablet-widths {
   .price {
+    padding: 0;
+    
+    &::before,
+    &::after {
+      top: -115px;
+      border-top-width: 115px;
+    }
+  }
+  
+  .price__wrapper {
     .container-fluid();
+    padding: 40px 8.5%;
+    padding-bottom: 27px;
   }
   
   .price__header {
@@ -111,7 +148,7 @@
     
     .col-1 {
       display: table-cell;
-      color: #5e5e5e;
+      color: rgba(255, 255, 255, 0.3);
     }
     
     .col-2 {
@@ -140,6 +177,20 @@
 
 
 @media @desktop-widths {
+  .price {
+    box-shadow: 0 -5px 5px -5px #666;
+    
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  
+  .price__wrapper {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+  
   .price__header {
     padding-left: 70px;
   }
@@ -173,6 +224,8 @@
       width: 140px;
       height: 140px;
       transform: translateY(0) translateX(-50%);
+      
+      background: url("../../img/photos/clock%20illustration.png") center no-repeat;
     }
   }
   
